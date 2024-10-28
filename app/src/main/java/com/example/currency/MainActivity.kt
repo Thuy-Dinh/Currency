@@ -33,15 +33,6 @@ class MainActivity : AppCompatActivity() {
         spinner1.adapter = adapter
         spinner2.adapter = adapter
 
-        edt1.setOnClickListener {
-            Log.d("ClickInfo", "edt1 clicked")
-        }
-
-        // Lắng nghe sự kiện click cho edt2
-        edt2.setOnClickListener {
-            Log.d("ClickInfo", "edt2 clicked")
-        }
-
         spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: android.view.View?, position: Int, id: Long) {
                 updateConversion()
